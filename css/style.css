@@ -1,0 +1,644 @@
+/* ==========================================================================
+   INKQI PRINTLAB - main stylesheet
+   1. Theme colours      5. Hero & sections     9. Service detail page
+   2. Base               6. Buttons & tags     10. Footer
+   3. Layout             7. Cards              11. Floating background
+   4. Navigation         8. Promotion          12. Responsive
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. THEME COLOURS  (change colours here)
+   ========================================================================== */
+:root {
+  --bg:      #FFFAFA;   /* page background (snow white) */
+  --card:    #FFFFFF;   /* cards, nav, tables */
+  --ink:     #2B2630;   /* main text (comfy black) */
+  --mute:    #7A7283;   /* secondary text */
+  --line:    #EAE3EC;   /* borders and dividers */
+  --acc:     #b489ca;   /* brand purple - CTA button background only */
+  --acc2:    #9e74b3;   /* deep purple - links, tags, numbers */
+
+  --bg-from: #FFFAFA;   /* page gradient: top */
+  --bg-to:   #f6e6ff;   /* page gradient: bottom */
+  --sh:      0 10px 30px -14px rgba(222, 180, 255, 0.28);   /* soft shadow */
+  --font: "Nunito", "Noto Sans Thai";
+}
+
+/* Dark mode: follows the device setting */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:      #241F29;
+    --card:    #2E2833;
+    --ink:     #F3EEE8;
+    --mute:    #B0A7B8;
+    --line:    #40384A;
+    --acc:     #B58DCA;
+    --acc2:    #CDB0DE;
+    --bg-from: #241F29;
+    --bg-to:   #3B2F47;
+  }
+}
+
+/* Dark mode: forced with <html data-theme="dark"> */
+:root[data-theme="dark"] {
+  --bg:      #241F29;
+  --card:    #2E2833;
+  --ink:     #F3EEE8;
+  --mute:    #B0A7B8;
+  --line:    #40384A;
+  --acc:     #B58DCA;
+  --acc2:    #CDB0DE;
+  --bg-from: #241F29;
+  --bg-to:   #3B2F47;
+}
+
+
+/* ==========================================================================
+   2. BASE
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;                 /* keeps anchors clear of the nav */
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--ink);
+  background: linear-gradient(180deg, var(--bg-from) 0%, var(--bg-to) 100%) fixed;
+  font: 16px/1.65 var(--font);
+}
+
+a {
+  color: inherit;
+}
+
+button, input, textarea {
+  font-family: inherit;
+}
+
+h2 {                                         /* section title: white pill */
+  display: table;
+  margin: 0 auto 14px;
+  padding: 10px 34px;
+  color: var(--ink);
+  border-radius: 999px;
+  font-size: 40px;
+  letter-spacing: .3px;
+  text-align: center;
+}
+
+.sub {
+  margin: 0 0 32px;
+  color: var(--mute);
+  text-align: center;
+}
+
+.note {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--mute);
+}
+
+
+/* ==========================================================================
+   3. LAYOUT
+   ========================================================================== */
+.w {                                         /* page container */
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 64px 0;
+}
+
+.grid {                                      /* auto-fit card grid (Why Inkqi) */
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.sgrid,                                      /* services: 2 columns */
+.pgrid {                                     /* promotion: 2 columns */
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
+/* ==========================================================================
+   4. NAVIGATION  (floating white pill)
+   ========================================================================== */
+nav {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 5;
+  padding: 16px 16px 0;
+  background: none;
+}
+
+nav .w {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 920px;
+  height: 60px;
+  padding: 0 24px 0 24px;
+  background: var(--card);
+  border-radius: 999px;
+  box-shadow: var(--sh);
+}
+
+.logo {
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.logo b {
+  color: var(--acc2);
+}
+
+nav .l {                                     /* menu links */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 18px;
+  font-size: 14px;
+}
+
+nav .l a {
+  color: var(--mute);
+  text-decoration: none;
+}
+
+nav .l a:hover {
+  color: var(--ink);
+}
+
+.burger {                                    /* hamburger: mobile only */
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: transform .2s, opacity .2s;
+}
+
+nav.open .burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+nav.open .burger span:nth-child(2) { opacity: 0; }
+nav.open .burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+
+/* ==========================================================================
+   5. HERO & SECTIONS
+   ========================================================================== */
+.hero {
+  padding: 36px 20px 20px;
+  text-align: center;
+}
+
+.hero .w {
+  max-width: 1040px;
+  padding: 84px 24px;
+  background: var(--card);
+  border-radius: 48px;
+  box-shadow: var(--sh);
+}
+
+.hero h1 {
+  margin: 0 0 18px;
+  font-size: clamp(38px, 9vw, 88px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: .04em;
+}
+
+.hero p {
+  max-width: 560px;
+  margin: 0 auto 32px;
+  font-size: clamp(17px, 2.5vw, 22px);
+  color: var(--mute);
+}
+
+.news {                                      /* News & Update banner */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 34px;
+  background: var(--acc);
+  color: #fff;
+  border-radius: 44px;
+}
+
+.news small {
+  font-weight: 800;
+  letter-spacing: .14em;
+  opacity: .85;
+}
+
+.news h3 {
+  margin: 6px 0;
+  font-size: 24px;
+}
+
+.news p {
+  margin: 0;
+  opacity: .92;
+}
+
+.news .btn {                                 /* white button on purple */
+  background: #fff;
+  color: #6F4C86;
+}
+
+
+/* ==========================================================================
+   6. BUTTONS & TAGS
+   ========================================================================== */
+.btn {                                       /* CTA - the only use of brand purple */
+  display: inline-block;
+  padding: 13px 24px;
+  background: var(--acc);
+  color: #fff;
+  border: 0;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn.o {                                     /* outline variant */
+  background: none;
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+}
+
+.tag {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 4px 12px;
+  background: color-mix(in srgb, var(--acc) 15%, transparent);
+  color: var(--acc2);
+  border-radius: 99px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.more {                                      /* "View details" link text */
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--acc2);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* ==========================================================================
+   7. CARDS
+   ========================================================================== */
+.card {
+  padding: 24px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 36px;
+  box-shadow: 0 8px 24px -14px color-mix(in srgb, var(--acc2) 45%, transparent);
+}
+
+.card h3 {
+  margin: 12px 0 6px;
+  font-size: 18px;
+}
+
+.card p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--mute);
+}
+
+/* service card: square image left, text right */
+.sv {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  transition: transform .15s;
+}
+
+.sv:hover {
+  transform: translateY(-4px);
+}
+
+.sv .tx {
+  min-width: 0;
+}
+
+.ic {                                        /* square service image */
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 130px;
+  aspect-ratio: 1;
+  border-radius: 20px;
+  font-size: 42px;
+  color: #fff;
+}
+
+
+/* ==========================================================================
+   8. PROMOTION
+   ========================================================================== */
+#promo .w > .tag {                           /* "LIMITED TIME" above the title */
+  display: table;
+  margin: 0 auto 12px;
+}
+
+.pc {
+  display: flex;
+  flex-direction: column;
+}
+
+.pc .btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.pi {                                        /* promo image */
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 10;
+  border-radius: 28px;
+  font-size: 64px;
+  color: #fff;
+}
+
+.pi small {
+  position: absolute;
+  left: 14px;
+  bottom: 10px;
+  font-size: 12px;
+  opacity: .85;
+}
+
+.pc dl {                                     /* details list */
+  margin: 16px 0 20px;
+}
+
+.pc dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px dashed var(--line);
+  font-size: 15px;
+}
+
+.pc dt {
+  color: var(--mute);
+}
+
+.pc dd {
+  margin: 0;
+  font-weight: 700;
+  text-align: right;
+}
+
+
+/* ==========================================================================
+   9. SERVICE DETAIL PAGE
+   ========================================================================== */
+.crumb {
+  padding-top: 24px;
+  font-size: 14px;
+  color: var(--mute);
+}
+
+.ph {                                        /* intro: text + big image */
+  display: grid;
+  align-items: center;
+  gap: 36px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding: 36px 0 56px;
+}
+
+.ph h1 {
+  margin: 0 0 12px;
+  font-size: clamp(32px, 6vw, 56px);
+  line-height: 1.05;
+}
+
+.ph .big {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border-radius: 48px;
+  font-size: 96px;
+  color: #fff;
+}
+
+.gal {                                       /* gallery */
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.gal div {
+  display: flex;
+  align-items: flex-end;
+  aspect-ratio: 4 / 3;
+  padding: 14px;
+  border-radius: 32px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-shadow: 0 1px 6px #0007;
+}
+
+.tw {                                        /* scrolls tables on small screens */
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-collapse: collapse;
+  border-radius: 26px;
+  box-shadow: var(--sh);
+}
+
+td, th {
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
+  text-align: left;
+}
+
+th {
+  width: 34%;
+  font-weight: 600;
+  color: var(--mute);
+}
+
+.steps {                                     /* how it works */
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.num {                                       /* step number circle */
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  background: var(--acc2);
+  color: var(--bg);
+  border-radius: 50%;
+  font-weight: 800;
+}
+
+details {                                    /* FAQ */
+  margin-bottom: 10px;
+  padding: 16px 20px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  box-shadow: var(--sh);
+}
+
+summary {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+details p {
+  margin: 10px 0 0;
+  color: var(--mute);
+}
+
+.cta {                                       /* bottom call-to-action box */
+  padding: 44px 20px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 48px;
+  text-align: center;
+}
+
+
+/* ==========================================================================
+   10. FOOTER
+   ========================================================================== */
+footer {
+  margin-top: 40px;
+  padding: 36px 0;
+  background: var(--card);
+  border-radius: 40px 40px 0 0;
+  box-shadow: var(--sh);
+  font-size: 14px;
+  color: var(--mute);
+}
+
+footer .w {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+footer a {
+  display: block;
+  margin: 4px 0;
+  text-decoration: none;
+}
+
+
+/* ==========================================================================
+   11. FLOATING BACKGROUND (octopus, created in js/common.js)
+   ========================================================================== */
+.ball {
+  position: fixed;
+  z-index: -1;
+  opacity: .6;
+  pointer-events: none;
+}
+
+
+/* ==========================================================================
+   12. RESPONSIVE
+   ========================================================================== */
+@media (max-width: 760px) {
+  .sgrid,
+  .pgrid {
+    grid-template-columns: 1fr;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  nav .l {                                   /* menu becomes a dropdown card */
+    display: none;
+    position: absolute;
+    top: 84px;
+    left: 16px;
+    right: 16px;
+    flex-direction: column;
+    gap: 0;
+    padding: 6px 24px 10px;
+    background: var(--card);
+    border-radius: 28px;
+    box-shadow: var(--sh);
+    font-size: 17px;
+  }
+
+  nav .l a {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  nav.open .l {
+    display: flex;
+  }
+}
+
+@media (max-width: 420px) {
+  .ic {
+    width: 96px;
+    font-size: 32px;
+  }
+
+  .sv {
+    gap: 14px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+}

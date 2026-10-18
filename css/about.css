@@ -1,0 +1,152 @@
+/* About us section (uses theme variables from style.css) */
+
+/* 70% text / 30% square illustration */
+.about-top {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 7fr 3fr;
+  align-items: stretch;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
+  padding: 36px;
+}
+
+.about-text .tag { margin-bottom: 6px; }
+
+.about-text p {
+  margin: 0;
+  font-size: clamp(18px, 2.4vw, 24px);
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.about-art {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  align-self: center;
+  overflow: hidden;
+  border-radius: 36px;
+  box-shadow: var(--sh);
+}
+
+.about-art svg { width: 55%; }
+.about-art img { width: 100%; height: 100%; object-fit: cover; }
+
+/* co-creator cards */
+.co-title {
+  margin: 48px 0 18px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.creators {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.creator { padding: 28px; }
+
+.c-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.c-head h3 { margin: 0; font-size: 22px; }
+
+.role {
+  color: var(--acc2);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.creator > p { margin: 16px 0 18px; font-size: 16px; }
+
+.avatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  overflow: hidden;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+.c-gal {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.gt {
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.gt img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+.gt:hover img { transform: scale(1.08); }
+
+.ph-tile {
+  display: flex;
+  align-items: flex-end;
+  padding: 8px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  text-shadow: 0 1px 6px #0007;
+}
+
+.socials { display: flex; gap: 10px; margin-top: 18px; }
+
+.soc {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  color: var(--acc2);
+  border: 1.5px solid color-mix(in srgb, var(--acc2) 35%, transparent);
+  border-radius: 50%;
+  transition: transform .15s, background .15s;
+}
+
+.soc svg { width: 19px; height: 19px; }
+.soc:hover { transform: translateY(-3px); background: color-mix(in srgb, var(--acc2) 12%, transparent); }
+
+@media (max-width: 760px) {
+  .about-top, .creators { grid-template-columns: 1fr; }
+  .about-art { width: 60%; margin: 0 auto; }
+  .about-text { padding: 26px; }
+}
+
+/* images uploaded through the CMS */
+.ic img,
+.ph .big img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.pi img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.ic, .ph .big { overflow: hidden; }

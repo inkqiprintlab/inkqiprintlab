@@ -1,0 +1,163 @@
+# Decap CMS configuration - defines the forms editors see in /admin
+backend:
+  name: git-gateway        # uses Netlify Identity for login (no GitHub account needed for editors)
+  branch: main             # change if your GitHub branch has another name
+
+media_folder: "img/uploads"    # where uploaded images are saved in the repo
+public_folder: "/img/uploads"  # how the website refers to them
+
+collections:
+  - name: "content"
+    label: "Website content"
+    files:
+
+      # ---------------------------------------------------------------- site
+      - name: "site"
+        label: "Site & home page texts"
+        file: "content/site.json"
+        fields:
+          - { label: "Discord invite link", name: "discord", widget: "string" }
+          - { label: "Contact email", name: "email", widget: "string" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Sub heading", name: "sub", widget: "text" }
+              - { label: "Button text", name: "button", widget: "string" }
+          - label: "Promotion section"
+            name: "promo"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Sub heading", name: "sub", widget: "text" }
+              - { label: "Order button text", name: "button", widget: "string" }
+          - label: "Our service section"
+            name: "services"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Sub heading", name: "sub", widget: "text" }
+              - { label: "Card button text", name: "button", widget: "string" }
+          - label: "News & update banner"
+            name: "news"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Button text", name: "button", widget: "string" }
+              - { label: "Button link", name: "link", widget: "string" }
+          - label: "Footer social links"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Twitter link", name: "twitter", widget: "string" }
+              - { label: "Instagram link", name: "instagram", widget: "string" }
+
+      # ----------------------------------------------------------- promotions
+      - name: "promotions"
+        label: "Promotion products"
+        file: "content/promotions.json"
+        fields:
+          - label: "Products"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.n}}"
+            fields:
+              - { label: "Title", name: "n", widget: "string" }
+              - { label: "Image", name: "img", widget: "image", required: false }
+              - { label: "Icon (shown if no image)", name: "e", widget: "string", required: false }
+              - { label: "Placeholder colours", name: "c", widget: "string", hint: "Two colours separated by a comma, e.g. #C0A0D2,#EBD9F4" }
+              - { label: "Description", name: "d", widget: "text" }
+              - label: "Details (price, ordering period, ...)"
+                name: "rows"
+                widget: "list"
+                summary: "{{fields.label}}: {{fields.value}}"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+
+      # ------------------------------------------------------------- services
+      - name: "services"
+        label: "Services (cards + detail pages)"
+        file: "content/services.json"
+        fields:
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            summary: "{{fields.n}}"
+            fields:
+              - { label: "Key (used in the page link - do not change)", name: "key", widget: "string" }
+              - { label: "Name", name: "n", widget: "string" }
+              - { label: "Footer link name", name: "footer", widget: "string" }
+              - { label: "Image", name: "img", widget: "image", required: false }
+              - { label: "Icon (shown if no image)", name: "e", widget: "string", required: false }
+              - { label: "Placeholder colours", name: "c", widget: "string", hint: "Two colours separated by a comma" }
+              - { label: "Short description (card)", name: "t", widget: "text" }
+              - { label: "Intro (detail page)", name: "intro", widget: "text" }
+              - { label: "Gallery captions", name: "gal", widget: "list", field: { label: "Caption", name: "caption", widget: "string" } }
+              - label: "Specifications"
+                name: "spec"
+                widget: "list"
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+              - label: "Prices"
+                name: "price"
+                widget: "list"
+                summary: "{{fields.label}}: {{fields.value}}"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Price", name: "value", widget: "string" }
+              - { label: "Delivery note", name: "del", widget: "text" }
+              - label: "FAQ"
+                name: "faq"
+                widget: "list"
+                summary: "{{fields.q}}"
+                fields:
+                  - { label: "Question", name: "q", widget: "string" }
+                  - { label: "Answer", name: "a", widget: "text" }
+
+      # ------------------------------------------------------------ about us
+      - name: "about"
+        label: "About us & co-creators"
+        file: "content/about.json"
+        fields:
+          - { label: "Section heading", name: "heading", widget: "string" }
+          - { label: "Co-creators heading", name: "coTitle", widget: "string" }
+          - { label: "Illustration (1:1 image)", name: "illustration", widget: "image", required: false }
+          - label: "Story blocks"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Co-creators"
+            name: "creators"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string", required: false }
+              - { label: "Description", name: "bio", widget: "text", required: false }
+              - { label: "Profile image", name: "img", widget: "image", required: false }
+              - { label: "Placeholder colours", name: "c", widget: "string", hint: "Two colours separated by a comma" }
+              - label: "Gallery (up to 4)"
+                name: "gallery"
+                widget: "list"
+                max: 4
+                summary: "{{fields.cap}}"
+                fields:
+                  - { label: "Image", name: "img", widget: "image", required: false }
+                  - { label: "Caption", name: "cap", widget: "string", required: false }
+              - label: "Social links"
+                name: "social"
+                widget: "list"
+                required: false
+                summary: "{{fields.type}}"
+                fields:
+                  - { label: "Type", name: "type", widget: "select", options: ["instagram", "x", "facebook", "tiktok", "artstation", "website", "email"] }
+                  - { label: "Link", name: "url", widget: "string" }

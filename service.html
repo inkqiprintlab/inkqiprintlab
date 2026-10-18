@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Service | INKQI PRINTLAB</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&family=Noto+Sans+Thai:wght@400;600;700;900&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/about.css">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+<nav><div class="w"><a class="logo" href="index.html">INK<b>QI</b> PRINTLAB</a>
+<button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button><div class="l"><a href="index.html#home">Home</a><a class="discord" href="https://discord.gg/your-invite" target="_blank" rel="noopener">Discord</a></div></div></nav>
+<main id="app"></main>
+<footer><div class="w">
+<div><b style="color:var(--ink);letter-spacing:.08em">INKQI PRINTLAB</b><br>Crafted by artist, for artist.<br>© 2026 Inkqi Printlab</div>
+<div id="fs"></div>
+<div id="fc"></div>
+</div></footer>
+
+<script src="js/content.js"></script>
+<script src="js/octopus.js"></script>
+<script src="js/common.js"></script>
+<script src="js/service.js"></script>
+<script>
+  /* sends invited editors to /admin after they accept the invite */
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; });
+    });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "discord": "https://discord.gg/your-invite",
+  "email": "inkqi.printlab@gmail.com",
+  "hero": {
+    "sub": "ร้านรับพิมพ์งานและผลิตสินค้าสำหรับครีเอเตอร์ เน้นสีสวย คุณภาพดี ใส่ใจทุกรายละเอียด 💖",
+    "button": "Be Part of Our Beginning"
+  },
+  "promo": {
+    "label": "LIMITED TIME",
+    "heading": "Promotion",
+    "sub": "โปรโมชันพิเศษสำหรับช่วงเปิดร้าน ให้ทุกไอเดียของคุณกลายเป็นชิ้นงานจริงในราคาสุดพิเศษ 💖 เลือกใช้เทมเพลตที่พร้อมนำไปผลิตได้ทันที ✨",
+    "button": "Order this template"
+  },
+  "services": {
+    "heading": "Our Service",
+    "sub": "เปลี่ยนไอเดียของคุณให้กลายเป็นชิ้นงานจริง ด้วยบริการผลิตสินค้าสร้างสรรค์ที่ออกแบบได้ในแบบของคุณ",
+    "button": "View details →"
+  },
+  "news": {
+    "label": "NEWS & UPDATE",
+    "heading": "We're opening our doors soon",
+    "text": "Join the founding list for early access, launch pricing and a free test print.",
+    "button": "Join early access",
+    "link": "mailto:inkqi.printlab@gmail.com?subject=Join%20Inkqi%20early%20access"
+  },
+  "footer": {
+    "twitter": "#",
+    "instagram": "#"
+  }
+}
