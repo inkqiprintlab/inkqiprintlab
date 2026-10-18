@@ -1,19 +1,48 @@
 {
   "services": [
     {
-      "key": "stickers",
-      "n": "สติกเกอร์",
-      "e": "✦",
       "c": "#B08CC4,#D8BCE6",
-      "img": "",
-      "t": "รับผลิตสติกเกอร์รูปแบบ ทั้งไดคัท 50% และ 100% ตามทรงและสติกเกอร์สำหรับตกแต่งสินค้า",
+      "img": "/img/uploads/inkqi-octopus.svg",
+      "e": "✦",
+      "price": [
+        {
+          "label": "Small (up to 5 cm)",
+          "value": "from ฿12 / pc"
+        },
+        {
+          "label": "Medium (up to 8 cm)",
+          "value": "from ฿20 / pc"
+        },
+        {
+          "label": "Sticker sheet A5",
+          "value": "from ฿90 / sheet"
+        }
+      ],
+      "del": "Production 3–5 working days + shipping 1–3 days within Thailand.",
       "intro": "Turn your characters and logos into vinyl stickers with crisp lines and rich colour. Perfect for merch tables, conventions and packaging.",
+      "n": "สติกเกอร์",
       "gal": [
         "Die-cut edge detail",
         "Holographic finish",
         "Kiss-cut sheet",
         "Matte vs gloss"
       ],
+      "t": "รับผลิตสติกเกอร์รูปแบบ ทั้งไดคัท 50% และ 100% ตามทรงและสติกเกอร์สำหรับตกแต่งสินค้า",
+      "faq": [
+        {
+          "q": "Do you test-print colours?",
+          "a": "Yes. Add a proof for a small fee before the full run."
+        },
+        {
+          "q": "Are stickers waterproof?",
+          "a": "Vinyl stickers with laminate are water and scratch resistant."
+        },
+        {
+          "q": "Can I mix designs in one order?",
+          "a": "Yes, mix designs on a sheet or order several runs together."
+        }
+      ],
+      "footer": "Sticker",
       "spec": [
         {
           "label": "Materials",
@@ -40,51 +69,55 @@
           "value": "PNG / PDF / AI, 300 dpi, 2 mm bleed"
         }
       ],
-      "price": [
-        {
-          "label": "Small (up to 5 cm)",
-          "value": "from ฿12 / pc"
-        },
-        {
-          "label": "Medium (up to 8 cm)",
-          "value": "from ฿20 / pc"
-        },
-        {
-          "label": "Sticker sheet A5",
-          "value": "from ฿90 / sheet"
-        }
-      ],
-      "del": "Production 3–5 working days + shipping 1–3 days within Thailand.",
-      "faq": [
-        {
-          "q": "Do you test-print colours?",
-          "a": "Yes. Add a proof for a small fee before the full run."
-        },
-        {
-          "q": "Are stickers waterproof?",
-          "a": "Vinyl stickers with laminate are water and scratch resistant."
-        },
-        {
-          "q": "Can I mix designs in one order?",
-          "a": "Yes, mix designs on a sheet or order several runs together."
-        }
-      ],
-      "footer": "Sticker"
+      "key": "stickers"
     },
     {
-      "key": "prints",
-      "n": "อาร์ตปริ้น",
-      "e": "❖",
       "c": "#7C5A93,#B08CC4",
       "img": "",
-      "t": "รับพิมพ์ผลงานภาพวาด ภาพประกอบ โปสการ์ด และโฟโต้การ์ด",
+      "e": "❖",
+      "price": [
+        {
+          "label": "A5",
+          "value": "from ฿90"
+        },
+        {
+          "label": "A4",
+          "value": "from ฿180"
+        },
+        {
+          "label": "A3",
+          "value": "from ฿350"
+        },
+        {
+          "label": "A2",
+          "value": "from ฿750"
+        }
+      ],
+      "del": "Production 2–4 working days. Prints ship flat or in tubes.",
       "intro": "Show your artwork the way you painted it. Fine art pigment printing with accurate colour, deep blacks and papers that feel as good as they look.",
+      "n": "อาร์ตปริ้น",
       "gal": [
         "Paper texture close-up",
         "Colour accuracy",
         "Signed & numbered edition",
         "Framed mockup"
       ],
+      "t": "รับพิมพ์ผลงานภาพวาด ภาพประกอบ โปสการ์ด และโฟโต้การ์ด",
+      "faq": [
+        {
+          "q": "How long will prints last?",
+          "a": "Archival pigment on acid-free paper lasts for decades away from direct sun."
+        },
+        {
+          "q": "Can you match my screen colours?",
+          "a": "We calibrate to sRGB and can colour-check a test print."
+        },
+        {
+          "q": "Do you offer signing?",
+          "a": "Yes, we can hand-sign and number editions for you."
+        }
+      ],
+      "footer": "Art print",
       "spec": [
         {
           "label": "Papers",
@@ -111,55 +144,51 @@
           "value": "TIFF / PNG, 300 dpi, sRGB or AdobeRGB"
         }
       ],
-      "price": [
-        {
-          "label": "A5",
-          "value": "from ฿90"
-        },
-        {
-          "label": "A4",
-          "value": "from ฿180"
-        },
-        {
-          "label": "A3",
-          "value": "from ฿350"
-        },
-        {
-          "label": "A2",
-          "value": "from ฿750"
-        }
-      ],
-      "del": "Production 2–4 working days. Prints ship flat or in tubes.",
-      "faq": [
-        {
-          "q": "How long will prints last?",
-          "a": "Archival pigment on acid-free paper lasts for decades away from direct sun."
-        },
-        {
-          "q": "Can you match my screen colours?",
-          "a": "We calibrate to sRGB and can colour-check a test print."
-        },
-        {
-          "q": "Do you offer signing?",
-          "a": "Yes, we can hand-sign and number editions for you."
-        }
-      ],
-      "footer": "Art print"
+      "key": "prints"
     },
     {
-      "key": "keychains",
-      "n": "อคริลิก",
-      "e": "◈",
       "c": "#6F4C86,#A98AC0",
       "img": "",
-      "t": "รับผลิตสินค้าจากอะคริลิค ทั้งบริการพิมพ์ลายและตัดตามทรง เช่นพวงกุญแจ เข็มกลัด และอื่นๆ",
+      "e": "◈",
+      "price": [
+        {
+          "label": "Keychain 5 cm",
+          "value": "from ฿35 / pc"
+        },
+        {
+          "label": "Standee 10 cm",
+          "value": "from ฿60 / pc"
+        },
+        {
+          "label": "Packaging (OPP bag + card)",
+          "value": "from ฿6 / pc"
+        }
+      ],
+      "del": "Production 5–7 working days + shipping.",
       "intro": "Give your characters a physical form. Clear acrylic with direct UV print, laser-cut to your outline.",
+      "n": "อคริลิก",
       "gal": [
         "Laser-cut outline",
         "Glitter backing",
         "Standee base",
         "Packaging options"
       ],
+      "t": "รับผลิตสินค้าจากอะคริลิค ทั้งบริการพิมพ์ลายและตัดตามทรง เช่นพวงกุญแจ เข็มกลัด และอื่นๆ",
+      "faq": [
+        {
+          "q": "Do I need to draw the cut line?",
+          "a": "No. Send your art and we will prepare the cut path for approval."
+        },
+        {
+          "q": "Are they durable?",
+          "a": "Yes. UV ink and protective coating resist scratches."
+        },
+        {
+          "q": "Can I add backing cards?",
+          "a": "Yes, custom backing cards are available."
+        }
+      ],
+      "footer": "Acrylic merch",
       "spec": [
         {
           "label": "Material",
@@ -186,51 +215,51 @@
           "value": "PNG with transparent background + cut line"
         }
       ],
-      "price": [
-        {
-          "label": "Keychain 5 cm",
-          "value": "from ฿35 / pc"
-        },
-        {
-          "label": "Standee 10 cm",
-          "value": "from ฿60 / pc"
-        },
-        {
-          "label": "Packaging (OPP bag + card)",
-          "value": "from ฿6 / pc"
-        }
-      ],
-      "del": "Production 5–7 working days + shipping.",
-      "faq": [
-        {
-          "q": "Do I need to draw the cut line?",
-          "a": "No. Send your art and we will prepare the cut path for approval."
-        },
-        {
-          "q": "Are they durable?",
-          "a": "Yes. UV ink and protective coating resist scratches."
-        },
-        {
-          "q": "Can I add backing cards?",
-          "a": "Yes, custom backing cards are available."
-        }
-      ],
-      "footer": "Acrylic merch"
+      "key": "keychains"
     },
     {
-      "key": "zines",
-      "n": "หนังสือ",
-      "e": "✎",
       "c": "#8E6AA4,#D2B0E0",
       "img": "",
-      "t": "รับผลิตงานพิมพ์รูปเล่ม เช่น อาร์ตบุ๊ก แฟนบุ๊ก และหนังสือรวมผลงาน",
+      "e": "✎",
+      "price": [
+        {
+          "label": "A5 zine, 16 pages",
+          "value": "from ฿45 / copy"
+        },
+        {
+          "label": "A5 comic, 40 pages",
+          "value": "from ฿95 / copy"
+        },
+        {
+          "label": "A5 artbook, 80 pages",
+          "value": "from ฿220 / copy"
+        }
+      ],
+      "del": "Production 5–8 working days depending on binding.",
       "intro": "From a 12-page zine to a full artbook. Short runs, no huge minimums, and bindings that make your story feel finished.",
+      "n": "หนังสือ",
       "gal": [
         "Saddle-stitch spine",
         "Risograph-style spread",
         "Perfect-bound artbook",
         "Cover finish options"
       ],
+      "t": "รับผลิตงานพิมพ์รูปเล่ม เช่น อาร์ตบุ๊ก แฟนบุ๊ก และหนังสือรวมผลงาน",
+      "faq": [
+        {
+          "q": "Can you help with layout?",
+          "a": "We offer basic imposition checks. Full layout is available as an add-on."
+        },
+        {
+          "q": "Is a sample copy possible?",
+          "a": "Yes, order one dummy copy before your full run."
+        },
+        {
+          "q": "What about reprints?",
+          "a": "We keep your file settings for fast reprints."
+        }
+      ],
+      "footer": "Book",
       "spec": [
         {
           "label": "Binding",
@@ -257,36 +286,7 @@
           "value": "Single-page PDF, 300 dpi, 3 mm bleed"
         }
       ],
-      "price": [
-        {
-          "label": "A5 zine, 16 pages",
-          "value": "from ฿45 / copy"
-        },
-        {
-          "label": "A5 comic, 40 pages",
-          "value": "from ฿95 / copy"
-        },
-        {
-          "label": "A5 artbook, 80 pages",
-          "value": "from ฿220 / copy"
-        }
-      ],
-      "del": "Production 5–8 working days depending on binding.",
-      "faq": [
-        {
-          "q": "Can you help with layout?",
-          "a": "We offer basic imposition checks. Full layout is available as an add-on."
-        },
-        {
-          "q": "Is a sample copy possible?",
-          "a": "Yes, order one dummy copy before your full run."
-        },
-        {
-          "q": "What about reprints?",
-          "a": "We keep your file settings for fast reprints."
-        }
-      ],
-      "footer": "Book"
+      "key": "zines"
     }
   ]
 }
