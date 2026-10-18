@@ -1,7 +1,8 @@
 # Decap CMS configuration - defines the forms editors see in /admin
 backend:
-  name: git-gateway        # uses Netlify Identity for login (no GitHub account needed for editors)
-  branch: main             # change if your GitHub branch has another name
+  name: github
+  repo: meiasp/inkqiprintlab
+  branch: main
 
 media_folder: "img/uploads"    # where uploaded images are saved in the repo
 public_folder: "/img/uploads"  # how the website refers to them
