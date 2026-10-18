@@ -1,5 +1,5 @@
 {
-  "discord": "https://discord.gg/your-invite",
+  "discord": "https://discord.gg/Z234WcwDRZ",
   "email": "inkqi.printlab@gmail.com",
   "hero": {
     "sub": "ร้านรับพิมพ์งานและผลิตสินค้าสำหรับครีเอเตอร์ เน้นสีสวย คุณภาพดี ใส่ใจทุกรายละเอียด 💖",
@@ -13,18 +13,18 @@
   },
   "services": {
     "heading": "Our Service",
-    "sub": "เปลี่ยนไอเดียของคุณให้กลายเป็นชิ้นงานจริง ด้วยบริการผลิตสินค้าสร้างสรรค์ที่ออกแบบได้ในแบบของคุณ",
-    "button": "View details →"
+    "sub": "เรารับผลิตสติกเกอร์ โปสการ์ด โฟโต้การ์ด อะคริลิค และสินค้าอื่น ๆ พร้อมเทคนิคตกแต่งชิ้นงาน เช่น การปั๊มฟอยล์ เพื่อเพิ่มรายละเอียดและเอกลักษณ์ให้กับผลงานของคุณ",
+    "button": "View Details"
   },
   "news": {
     "label": "NEWS & UPDATE",
-    "heading": "We're opening our doors soon",
-    "text": "Join the founding list for early access, launch pricing and a free test print.",
-    "button": "Join early access",
-    "link": "mailto:inkqi.printlab@gmail.com?subject=Join%20Inkqi%20early%20access"
+    "heading": "Be Part of Our Beginning",
+    "text": "ติดตามข่าวสารสินค้าใหม่ โปรโมชัน และอัปเดตต่าง ๆ ของเราได้ที่ Discord มาอยู่ใกล้ชิดและพูดคุยกับพวกเราได้เลย!",
+    "button": "Join Our Community",
+    "link": "https://discord.gg/Z234WcwDRZ"
   },
   "footer": {
-    "twitter": "#",
-    "instagram": "#"
+    "twitter": "https://x.com/inkqi_printlab",
+    "instagram": "https://www.instagram.com/inkqi_printlab/"
   }
 }
