@@ -19,6 +19,8 @@ collections:
         fields:
           - { label: "Discord invite link", name: "discord", widget: "string" }
           - { label: "Contact email", name: "email", widget: "string" }
+          - { label: "Default 'Order' link", name: "orderLink", widget: "string", required: false, hint: "Used by every 'Order this template' and 'Start Order' button that has no link of its own. Leave empty to send an email instead." }
+          - { label: "Default 'Get a Quote' link", name: "quoteLink", widget: "string", required: false, hint: "Used by every 'Get a Quote' button that has no link of its own. Leave empty to send an email instead." }
           - label: "Hero"
             name: "hero"
             widget: "object"
@@ -71,6 +73,7 @@ collections:
               - { label: "Icon (shown if no image)", name: "e", widget: "string", required: false }
               - { label: "Placeholder colours", name: "c", widget: "string", hint: "Two colours separated by a comma, e.g. #C0A0D2,#EBD9F4" }
               - { label: "Description", name: "d", widget: "text" }
+              - { label: "Order button link", name: "link", widget: "string", required: false, hint: "Leave empty to use the default order link (or email)." }
               - label: "Details (price, ordering period, ...)"
                 name: "rows"
                 widget: "list"
@@ -113,6 +116,8 @@ collections:
                   - { label: "Label", name: "label", widget: "string" }
                   - { label: "Price", name: "value", widget: "string" }
               - { label: "Delivery note", name: "del", widget: "text" }
+              - { label: "'Get a Quote' link", name: "quoteLink", widget: "string", required: false, hint: "Leave empty to use the default quote link (or email)." }
+              - { label: "'Start Order' link", name: "orderLink", widget: "string", required: false, hint: "Leave empty to use the default order link (or email)." }
               - label: "FAQ"
                 name: "faq"
                 widget: "list"
