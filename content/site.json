@@ -1,20 +1,11 @@
 {
+  "orderLink": "coming-soon.html",
   "discord": "https://discord.gg/Z234WcwDRZ",
-  "email": "inkqi.printlab@gmail.com",
-  "hero": {
-    "sub": "ร้านรับพิมพ์งานและผลิตสินค้าสำหรับครีเอเตอร์ เน้นสีสวย คุณภาพดี ใส่ใจทุกรายละเอียด",
-    "button": "Be Part of Our Beginning"
-  },
   "promo": {
     "label": "LIMITED TIME",
     "heading": "Promotion",
     "sub": "โปรโมชั่นพิเศษสำหรับช่วงเปิดร้าน สำหรับสินค้าประเภท Acrylic Shaker และ Acrylic Pull Surprise ในราคาสุดพิเศษพร้อมนำไปผลิตได้ทันที",
     "button": "Start Order"
-  },
-  "services": {
-    "heading": "Our Service",
-    "sub": "เรารับผลิตสติกเกอร์ โปสการ์ด โฟโต้การ์ด อะคริลิค และสินค้าอื่น ๆ พร้อมเทคนิคตกแต่งชิ้นงาน เช่น การปั๊มฟอยล์ เพื่อเพิ่มรายละเอียดและเอกลักษณ์ให้กับผลงานของคุณ",
-    "button": "View Details"
   },
   "news": {
     "label": "NEWS & UPDATE",
@@ -23,8 +14,19 @@
     "button": "Join Our Community",
     "link": "https://discord.gg/Z234WcwDRZ"
   },
+  "quoteLink": "coming-soon.html",
+  "hero": {
+    "sub": "ร้านรับพิมพ์งานและผลิตสินค้าสำหรับครีเอเตอร์ เน้นสีสวย คุณภาพดี ใส่ใจทุกรายละเอียด",
+    "button": "Be Part of Our Beginning"
+  },
   "footer": {
     "twitter": "https://x.com/inkqi_printlab",
     "instagram": "https://www.instagram.com/inkqi_printlab/"
+  },
+  "email": "inkqi.printlab@gmail.com",
+  "services": {
+    "heading": "Our Service",
+    "sub": "เรารับผลิตสติกเกอร์ โปสการ์ด โฟโต้การ์ด อะคริลิค และสินค้าอื่น ๆ พร้อมเทคนิคตกแต่งชิ้นงาน เช่น การปั๊มฟอยล์ เพื่อเพิ่มรายละเอียดและเอกลักษณ์ให้กับผลงานของคุณ",
+    "button": "View Details"
   }
 }
