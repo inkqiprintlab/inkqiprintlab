@@ -23,8 +23,8 @@ const creatorCard = m => `
     <div><h3>${m.name}</h3>${m.role ? `<span class="role">${m.role}</span>` : ""}</div>
   </div>
   ${m.bio ? `<p>${m.bio}</p>` : ""}
-  <div class="c-gal">${m.gallery.slice(0, 4).map((t, i) => galleryTile(t, i, m.c)).join("")}</div>
-  ${m.social.length ? `<div class="socials">${m.social.map(socialLink).join("")}</div>` : ""}
+  <div class="c-gal">${(m.gallery || []).slice(0, 4).map((t, i) => galleryTile(t, i, m.c)).join("")}</div>
+  ${(m.social || []).length ? `<div class="socials">${m.social.map(socialLink).join("")}</div>` : ""}
 </article>`;
 
 const aboutSection = () => `
