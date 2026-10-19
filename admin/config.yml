@@ -1,7 +1,7 @@
 # Decap CMS configuration - defines the forms editors see in /admin
 backend:
   name: github
-  repo: meiasp/inkqiprintlab
+  repo: inkqiprintlab/inkqiprintlab
   branch: main
 
 media_folder: "img/uploads"    # where uploaded images are saved in the repo
